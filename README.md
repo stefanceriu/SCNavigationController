@@ -21,6 +21,10 @@ It was built on top of the [SCStackViewController](https://github.com/stefanceri
 
 ![Parallax - Sine Ease In Out - Top](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Sine%20Ease%20In%20Out%20-%20Top.gif)
 
+##### Parallax - Interactive
+
+![Parallax - Interactive](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Interactive.gif)
+
 ##### Plain - Elastic Ease Out
 
 ![Plain - Elastic Ease Out](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Plain%20-%20Elastic%20Ease%20Out.gif)
