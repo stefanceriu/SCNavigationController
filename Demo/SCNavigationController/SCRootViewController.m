@@ -112,7 +112,7 @@
 
 - (void)navigationController:(SCNavigationController *)navigationController didShowViewController:(SCMainViewController *)controller
 {
-    [controller.pageNumberLabel setText:[NSString stringWithFormat:@"Page %ld", (unsigned long)index]];
+    [controller.pageNumberLabel setText:[NSString stringWithFormat:@"Page %d", [navigationController.viewControllers indexOfObject:controller]]];
     
     [controller setEasingFunctionType:self.selectedEasingFunctionType];
     [controller setDuration:self.navigationController.animationDuration];
@@ -128,6 +128,13 @@
     });
     
     [controller setLayouterType:(SCStackLayouterType)[layouterToType[NSStringFromClass([self.navigationController.layouter class])] unsignedIntegerValue]];
+}
+
+- (void)navigationController:(SCNavigationController *)navigationController didNavigateToOffset:(CGPoint)offset
+{
+	for(SCMainViewController *viewController in self.navigationController.viewControllers) {
+		[viewController setVisiblePercentage:[navigationController visiblePercentageForViewController:viewController]];
+	}
 }
 
 @end

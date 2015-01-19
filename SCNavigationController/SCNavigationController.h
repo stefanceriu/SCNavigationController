@@ -196,6 +196,18 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  */
 - (NSArray *)visibleViewControllers;
 
+/**
+ * @return Float value representing the visible percentage
+ * @param @param viewController The view controller for which to fetch the
+ * visible percentage
+ *
+ * A view controller is visible when any part of it is visible (within the
+ * navigation controller's scrollView bounds and not covered by any other view)
+ *
+ * Ranges from 0.0f to 1.0f
+ */
+- (CGFloat)visiblePercentageForViewController:(UIViewController *)viewController;
+
 @end
 
 #pragma mark - Delegate

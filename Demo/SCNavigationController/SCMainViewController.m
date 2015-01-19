@@ -26,7 +26,14 @@ typedef NS_ENUM(NSUInteger, SCPickerViewComponentType)
 
 @implementation SCMainViewController
 
-#pragma mark - View Lifecycle
+#pragma mark - Public
+
+- (void)setVisiblePercentage:(CGFloat)percentage
+{
+	[self.visiblePercentageLabel setText:[NSString stringWithFormat:@"%.3f%%", percentage]];
+}
+
+#pragma mark - Actions
 
 - (IBAction)onPushButtonTap:(id)sender
 {

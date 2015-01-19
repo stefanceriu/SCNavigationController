@@ -22,13 +22,14 @@ typedef enum {
 @interface SCMainViewController : UIViewController
 
 @property (nonatomic, weak, readonly) UILabel *pageNumberLabel;
-@property (nonatomic, weak, readonly) UILabel *visiblePercentageLabel;
 
 @property (nonatomic, weak) IBOutlet id<SCMainViewControllerDelegate> delegate;
 
 @property (nonatomic, assign) SCStackLayouterType layouterType;
 @property (nonatomic, assign) SCEasingFunctionType easingFunctionType;
 @property (nonatomic, assign) NSTimeInterval duration;
+
+- (void)setVisiblePercentage:(CGFloat)percentage;
 
 @end
 

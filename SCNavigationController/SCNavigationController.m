@@ -109,6 +109,11 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
     return [self.viewControllers filteredArrayUsingPredicate:predicate];
 }
 
+- (CGFloat)visiblePercentageForViewController:(UIViewController *)viewController
+{
+	return [self.stackViewController visiblePercentageForViewController:viewController];
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)())completion
 {
 	NSAssert(viewController != nil, @"Trying to push a nil view controller");
