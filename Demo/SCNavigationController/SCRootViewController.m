@@ -17,8 +17,6 @@
 #import "SCStackLayouter.h"
 #import "SCParallaxStackLayouter.h"
 #import "SCSlidingStackLayouter.h"
-#import "SCGoogleMapsStackLayouter.h"
-#import "SCMerryGoRoundStackLayouter.h"
 #import "SCResizingStackLayouter.h"
 
 #import "SCStackViewController.h"
@@ -69,9 +67,7 @@
     dispatch_once(&onceToken, ^{
         typeToLayouter = (@{@(SCStackLayouterTypePlain)         : [SCStackLayouter class],
                             @(SCStackLayouterTypeSliding)       : [SCSlidingStackLayouter class],
-                            @(SCStackLayouterTypeParallax)      : [SCParallaxStackLayouter class],
-                            @(SCStackLayouterTypeGoogleMaps)    : [SCGoogleMapsStackLayouter class],
-                            @(SCStackLayouterTypeMerryGoRound)  : [SCMerryGoRoundStackLayouter class]});
+                            @(SCStackLayouterTypeParallax)      : [SCParallaxStackLayouter class]});
     });
     
     id<SCStackLayouterProtocol> layouter = [[typeToLayouter[@(mainViewController.layouterType)] alloc] init];
@@ -112,7 +108,7 @@
 
 - (void)navigationController:(SCNavigationController *)navigationController didShowViewController:(SCMainViewController *)controller
 {
-    [controller.pageNumberLabel setText:[NSString stringWithFormat:@"Page %d", [navigationController.viewControllers indexOfObject:controller]]];
+    [controller.pageNumberLabel setText:[NSString stringWithFormat:@"Page %lu", (unsigned long)[navigationController.viewControllers indexOfObject:controller]]];
     
     [controller setEasingFunctionType:self.selectedEasingFunctionType];
     [controller setDuration:self.navigationController.animationDuration];
@@ -122,9 +118,7 @@
     dispatch_once(&onceToken, ^{
         layouterToType = (@{NSStringFromClass([SCStackLayouter class])              : @(SCStackLayouterTypePlain),
                             NSStringFromClass([SCSlidingStackLayouter class])       : @(SCStackLayouterTypeSliding),
-                            NSStringFromClass([SCParallaxStackLayouter class])      : @(SCStackLayouterTypeParallax),
-                            NSStringFromClass([SCGoogleMapsStackLayouter class])    : @(SCStackLayouterTypeGoogleMaps),
-                            NSStringFromClass([SCMerryGoRoundStackLayouter class])  : @(SCStackLayouterTypeMerryGoRound)});
+                            NSStringFromClass([SCParallaxStackLayouter class])      : @(SCStackLayouterTypeParallax)});
     });
     
     [controller setLayouterType:(SCStackLayouterType)[layouterToType[NSStringFromClass([self.navigationController.layouter class])] unsignedIntegerValue]];

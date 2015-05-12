@@ -12,8 +12,6 @@ typedef enum {
     SCStackLayouterTypePlain,
     SCStackLayouterTypeSliding,
     SCStackLayouterTypeParallax,
-    SCStackLayouterTypeGoogleMaps,
-    SCStackLayouterTypeMerryGoRound,
     SCStackLayouterTypeCount
 } SCStackLayouterType;
 

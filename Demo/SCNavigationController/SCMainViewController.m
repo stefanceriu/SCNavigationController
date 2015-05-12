@@ -87,9 +87,7 @@ typedef NS_ENUM(NSUInteger, SCPickerViewComponentType)
             dispatch_once(&onceToken, ^{
                 typeToString = (@{@(SCStackLayouterTypePlain)              : @"Plain",
                                   @(SCStackLayouterTypeSliding)            : @"Sliding",
-                                  @(SCStackLayouterTypeParallax)           : @"Parallax",
-                                  @(SCStackLayouterTypeGoogleMaps)         : @"Google Maps",
-                                  @(SCStackLayouterTypeMerryGoRound)       : @"Merry Go Round"});
+                                  @(SCStackLayouterTypeParallax)           : @"Parallax"});
             });
             
             return [[NSAttributedString alloc] initWithString:typeToString[@(row)]
