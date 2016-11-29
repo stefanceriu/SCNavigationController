@@ -17,7 +17,7 @@
 		18A1F1201A0FAB27004BBE32 /* SCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A1F11E1A0FAB27004BBE32 /* SCMainViewController.xib */; };
 		18A1F1261A0FACCE004BBE32 /* UIColor+RandomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1F1231A0FACCE004BBE32 /* UIColor+RandomColors.m */; };
 		18A1F1271A0FACCE004BBE32 /* UIView+Shadows.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1F1251A0FACCE004BBE32 /* UIView+Shadows.m */; };
-		8665B5D57B830E2BA8BEB9C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D4BE2688E9388612E5796B /* libPods.a */; };
+		ADE6E747711B534ECFB8E030 /* libPods-SCNavigationController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 531DF34C444AA6A51D1B8D41 /* libPods-SCNavigationController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,10 @@
 		18A1F1231A0FACCE004BBE32 /* UIColor+RandomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColors.m"; sourceTree = "<group>"; };
 		18A1F1241A0FACCE004BBE32 /* UIView+Shadows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadows.h"; sourceTree = "<group>"; };
 		18A1F1251A0FACCE004BBE32 /* UIView+Shadows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadows.m"; sourceTree = "<group>"; };
+		2866E0F65EFF49044A4FF67C /* Pods-SCNavigationController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCNavigationController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCNavigationController/Pods-SCNavigationController.debug.xcconfig"; sourceTree = "<group>"; };
+		46DCD6AA77D388BDB353BBBC /* Pods-SCNavigationController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCNavigationController.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCNavigationController/Pods-SCNavigationController.release.xcconfig"; sourceTree = "<group>"; };
 		5193BD2CDD5FFB2620DFD7F5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		531DF34C444AA6A51D1B8D41 /* libPods-SCNavigationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SCNavigationController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D4BE2688E9388612E5796B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE7C60D3E0EF77A7CF8873 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,7 +56,7 @@
 				18A1F0E71A0FA578004BBE32 /* CoreGraphics.framework in Frameworks */,
 				18A1F0E91A0FA578004BBE32 /* UIKit.framework in Frameworks */,
 				18A1F0E51A0FA578004BBE32 /* Foundation.framework in Frameworks */,
-				8665B5D57B830E2BA8BEB9C7 /* libPods.a in Frameworks */,
+				ADE6E747711B534ECFB8E030 /* libPods-SCNavigationController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,7 @@
 				18A1F0E81A0FA578004BBE32 /* UIKit.framework */,
 				18A1F1031A0FA578004BBE32 /* XCTest.framework */,
 				65D4BE2688E9388612E5796B /* libPods.a */,
+				531DF34C444AA6A51D1B8D41 /* libPods-SCNavigationController.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +137,8 @@
 			children = (
 				5193BD2CDD5FFB2620DFD7F5 /* Pods.debug.xcconfig */,
 				DCCE7C60D3E0EF77A7CF8873 /* Pods.release.xcconfig */,
+				2866E0F65EFF49044A4FF67C /* Pods-SCNavigationController.debug.xcconfig */,
+				46DCD6AA77D388BDB353BBBC /* Pods-SCNavigationController.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,11 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A1F1131A0FA578004BBE32 /* Build configuration list for PBXNativeTarget "SCNavigationController" */;
 			buildPhases = (
-				9FC436B0BBA12FC4AEAB7B80 /* Check Pods Manifest.lock */,
+				9FC436B0BBA12FC4AEAB7B80 /* [CP] Check Pods Manifest.lock */,
 				18A1F0DD1A0FA578004BBE32 /* Sources */,
 				18A1F0DE1A0FA578004BBE32 /* Frameworks */,
 				18A1F0DF1A0FA578004BBE32 /* Resources */,
-				359088565875C0D4D6C84D50 /* Copy Pods Resources */,
+				359088565875C0D4D6C84D50 /* [CP] Copy Pods Resources */,
+				2F4C0BAB6443C808374FCB22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,34 +206,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		359088565875C0D4D6C84D50 /* Copy Pods Resources */ = {
+		2F4C0BAB6443C808374FCB22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCNavigationController/Pods-SCNavigationController-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FC436B0BBA12FC4AEAB7B80 /* Check Pods Manifest.lock */ = {
+		359088565875C0D4D6C84D50 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCNavigationController/Pods-SCNavigationController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC436B0BBA12FC4AEAB7B80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -322,7 +344,7 @@
 		};
 		18A1F1141A0FA578004BBE32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5193BD2CDD5FFB2620DFD7F5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 2866E0F65EFF49044A4FF67C /* Pods-SCNavigationController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -337,7 +359,7 @@
 		};
 		18A1F1151A0FA578004BBE32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCCE7C60D3E0EF77A7CF8873 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 46DCD6AA77D388BDB353BBBC /* Pods-SCNavigationController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

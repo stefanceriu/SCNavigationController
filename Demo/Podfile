@@ -1,3 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+target 'SCNavigationController' do
+
 pod 'SCNavigationController', :path => '../'
+
+end

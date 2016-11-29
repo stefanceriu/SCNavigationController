@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SCNavigationController'
-  s.version  = '1.0.1'
+  s.version  = '1.1'
   s.platform = :ios
   s.ios.deployment_target = '5.0'
 
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.frameworks = 'UIKit', 'QuartzCore', 'CoreGraphics', 'Foundation'
 
-  s.dependency 'SCStackViewController', '~> 3.1'
+  s.dependency 'SCStackViewController', '~> 3.3.3'
 end

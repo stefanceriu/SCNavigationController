@@ -68,51 +68,6 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  */
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 
-
-/** UIBezierPath inside which the scrollView doesn't respond to touch
- *events
- */
-@property (nonatomic, strong) UIBezierPath *touchRefusalArea;
-
-
-/** Boolean value that controls whether the scrollView bounces past the
- *  edge of content and back again
- *
- * Default value is set to true
- */
-@property (nonatomic, assign) BOOL bounces;
-
-
-/** A Boolean value that determines whether scrolling is enabled for the
- * scrollView.
- *
- * Default value is set to true
- */
-@property (nonatomic, assign) BOOL scrollEnabled;
-
-
-/** A Boolean value that controls whether the scrollView indicators are
- * visible.
- *
- * Default value is set to false
- */
-@property (nonatomic, assign) BOOL showsScrollIndicators;
-
-
-/** The minimum number of fingers that can be touching the view for this gesture to be recognized.
- *
- * Default value is set to 1
- */
-@property (nonatomic, assign) NSUInteger minimumNumberOfTouches;
-
-
-/** The maximum number of fingers that can be touching the view for this gesture to be recognized.
- *
- * Default value is set to NSUIntegerMax
- */
-@property (nonatomic, assign) NSUInteger maximumNumberOfTouches;
-
-
 /**
  * The gesture recognizer involved in navigating the stack
  * Disabled when only the root view controller is present on the stack

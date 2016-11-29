@@ -38,12 +38,6 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 @dynamic rootViewController;
 @dynamic easingFunction;
 @dynamic animationDuration;
-@dynamic touchRefusalArea;
-@dynamic bounces;
-@dynamic scrollEnabled;
-@dynamic showsScrollIndicators;
-@dynamic minimumNumberOfTouches;
-@dynamic maximumNumberOfTouches;
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController
 {
@@ -69,7 +63,6 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	
     [self.view setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 
-	[self setShowsScrollIndicators:NO];
 	[self setInteractiveGestureTriggerAreaWidth:kDefaultInteractiveGestureAreaWidth];
 	
     [self addChildViewController:self.stackViewController];
@@ -80,7 +73,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 
 - (void)viewWillLayoutSubviews
 {
-	[self _updateTouchRefusalArea];
+	[self _updateTouchApprovalAreas];
 }
 
 #pragma mark - Public
@@ -132,7 +125,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 											animated:animated
 										  completion:^{
 											  
-											  [self _updateTouchRefusalArea];
+                                              [self _updateTouchApprovalAreas];
 											  
 											  if(completion) {
 												  completion();
@@ -156,7 +149,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 													 animated:animated
 												   completion:^{
 													   
-													   [self _updateTouchRefusalArea];
+													   [self _updateTouchApprovalAreas];
 													   
 													   if(completion) {
 														   completion();
@@ -179,7 +172,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
     NSArray *controllersToPop = [self.viewControllers subarrayWithRange:controllersToPopRange];
 	
 	void(^cleanup)() = ^{
-		[self _updateTouchRefusalArea];
+		[self _updateTouchApprovalAreas];
 		
 		if(completion) {
 			completion();
@@ -250,10 +243,13 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 
 #pragma mark - Private
 
-- (void)_updateTouchRefusalArea
+- (void)_updateTouchApprovalAreas
 {
 	if(self.viewControllers.count == 0) {
-		[self.stackViewController setTouchRefusalArea:[UIBezierPath bezierPathWithRect:self.view.bounds]];
+
+        for(SCScrollViewTouchApprovalArea *approvalArea in self.stackViewController.scrollView.touchApprovalAreas) {
+            [self.stackViewController.scrollView removeTouchApprovalArea:approvalArea];
+        }
 		return;
 	}
 	
@@ -263,22 +259,25 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	
     CGMutablePathRef path = CGPathCreateMutable();
     [self.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        CGRect frame = self.view.bounds;
-        frame.origin.x = CGRectGetWidth(self.view.bounds) * idx;
-		
-		if(self.allowedInteractiveGestureOperations & SCNavigationControllerOperationPop) {
-			frame.size.width -= self.interactiveGestureTriggerAreaWidth;
-			frame.origin.x += self.interactiveGestureTriggerAreaWidth;
-		}
-		
-		if(self.allowedInteractiveGestureOperations & SCNavigationControllerOperationPush) {
-			frame.size.width -= self.interactiveGestureTriggerAreaWidth;
-		}
-		
-        CGPathAddRect(path, NULL, frame);
+        
+        if(self.allowedInteractiveGestureOperations & SCNavigationControllerOperationPop) {
+            SCScrollViewTouchApprovalArea *approvalArea = [[SCScrollViewTouchApprovalArea alloc] init];
+            
+            CGRect frame = CGRectMake(CGRectGetWidth(self.view.bounds) * idx, 0.0f, self.interactiveGestureTriggerAreaWidth, CGRectGetHeight(self.view.bounds));
+            [approvalArea setPath:[UIBezierPath bezierPathWithRect:frame]];
+            
+            [self.stackViewController.scrollView addTouchApprovalArea:approvalArea];
+        }
+        
+        if(self.allowedInteractiveGestureOperations & SCNavigationControllerOperationPush) {
+            SCScrollViewTouchApprovalArea *approvalArea = [[SCScrollViewTouchApprovalArea alloc] init];
+            
+            CGRect frame = CGRectMake(CGRectGetWidth(self.view.bounds) * (idx + 1) - self.interactiveGestureTriggerAreaWidth, 0.0f, self.interactiveGestureTriggerAreaWidth, CGRectGetHeight(self.view.bounds));
+            [approvalArea setPath:[UIBezierPath bezierPathWithRect:frame]];
+            
+            [self.stackViewController.scrollView addTouchApprovalArea:approvalArea];
+        }
     }];
-    
-    [self.stackViewController setTouchRefusalArea:[UIBezierPath bezierPathWithCGPath:path]];
 }
 
 @end
