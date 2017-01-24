@@ -256,8 +256,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	if(self.allowedInteractiveGestureOperations == SCNavigationControllerOperationNone) {
 		return;
 	}
-	
-    CGMutablePathRef path = CGPathCreateMutable();
+
     [self.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         if(self.allowedInteractiveGestureOperations & SCNavigationControllerOperationPop) {
