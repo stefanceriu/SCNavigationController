@@ -15,31 +15,31 @@ It was built on top of the [SCStackViewController](https://github.com/stefanceri
 
 ##### Parallax - Sine Ease In Out - Right
 
-![Parallax - Sine Ease In Out - Right](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Sine%20Ease%20In%20Out%20-%20Right.gif)
+![Parallax - Sine Ease In Out - Right](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoVFVNR1A2b0wwa1k)
 
 ##### Parallax - Sine Ease In Out - Top
 
-![Parallax - Sine Ease In Out - Top](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Sine%20Ease%20In%20Out%20-%20Top.gif)
+![Parallax - Sine Ease In Out - Top](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoOVktTWRrSVV5ZDQ)
 
 ##### Parallax - Interactive
 
-![Parallax - Interactive](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Interactive.gif)
+![Parallax - Interactive](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZ1JYckpENk1WdkU)
 
 ##### Plain - Elastic Ease Out
 
-![Plain - Elastic Ease Out](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Plain%20-%20Elastic%20Ease%20Out.gif)
+![Plain - Elastic Ease Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoSTZudVo1T0o1dzQ)
 
 ##### Sliding - Bounce Ease Out
 
-![Sliding - Bounce Ease Out](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Sliding%20-%20Bounce%20Ease%20Out.gif)
+![Sliding - Bounce Ease Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoRHg0bkcwamE0LXc)
 
 ##### Parallax - Back Ease In Out
 
-![Parallax - Back Ease In Out](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Parallax%20-%20Back%20Ease%20In%20Out.gif)
+![Parallax - Back Ease In Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZHN3S1V4b3RlZWc)
 
 ##### Google Maps - Back Ease In
 
-![Google Maps - Back Ease In](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCNavigationController/Google%20Maps%20-%20Back%20Ease%20In.gif)
+![Google Maps - Back Ease In](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZDVGTGlVeFZNUGM)
 
 ## Usage
 
