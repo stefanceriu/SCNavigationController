@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name     = 'SCNavigationController'
-  s.version  = '1.1.2'
+  s.version  = '1.1.3'
   s.platform = :ios
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '6.0'
 
   s.summary  = 'SCNavigationController is an UINavigationController like container view controller built to provide and expose more features and control'
   s.description = <<-DESC

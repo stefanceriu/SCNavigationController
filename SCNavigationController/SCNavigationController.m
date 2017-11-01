@@ -107,7 +107,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	return [self.stackViewController visiblePercentageForViewController:viewController];
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)())completion
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion
 {
 	NSAssert(viewController != nil, @"Trying to push a nil view controller");
 	
@@ -134,7 +134,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	}];
 }
 
-- (void)popViewControllerAnimated:(BOOL)animated completion:(void (^)())completion
+- (void)popViewControllerAnimated:(BOOL)animated completion:(void (^)(void))completion
 {
     if([[self.viewControllers lastObject] isEqual:self.rootViewController]) {
         if(completion) {
@@ -158,7 +158,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
 	}];
 }
 
-- (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)())completion
+- (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion
 {
     if([[self.viewControllers lastObject] isEqual:viewController]) {
         if(completion) {
@@ -171,7 +171,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
     NSRange controllersToPopRange = NSMakeRange([self.viewControllers indexOfObject:viewController] + 1, self.viewControllers.count - [self.viewControllers indexOfObject:viewController] - 1);
     NSArray *controllersToPop = [self.viewControllers subarrayWithRange:controllersToPopRange];
 	
-	void(^cleanup)() = ^{
+	void(^cleanup)(void) = ^{
 		[self _updateTouchApprovalAreas];
 		
 		if(completion) {
@@ -201,7 +201,7 @@ static const CGFloat kDefaultInteractiveGestureAreaWidth = 30.0f;
     }
 }
 
-- (void)popToRootViewControllerAnimated:(BOOL)animated completion:(void (^)())completion
+- (void)popToRootViewControllerAnimated:(BOOL)animated completion:(void (^)(void))completion
 {
     [self popToViewController:self.rootViewController animated:animated completion:completion];
 }

@@ -104,7 +104,7 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  */
 - (void)pushViewController:(UIViewController *)viewController
                   animated:(BOOL)animated
-                completion:(void(^)())completion;
+                completion:(void(^)(void))completion;
 
 
 /** Pops the last view controller from the stack
@@ -113,7 +113,7 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  * @param completion Completion block called when the pop is done
  */
 - (void)popViewControllerAnimated:(BOOL)animated
-                       completion:(void(^)())completion;
+                       completion:(void(^)(void))completion;
 
 
 /** Pops all the view controllers up to and not including 
@@ -125,7 +125,7 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  */
 - (void)popToViewController:(UIViewController *)viewController
                    animated:(BOOL)animated
-                 completion:(void(^)())completion;
+                 completion:(void(^)(void))completion;
 
 
 /** Pops all the view controllers
@@ -136,7 +136,7 @@ typedef NS_OPTIONS(NSInteger, SCNavigationControllerOperation) {
  * @param completion Completion block called when the pop is done
  */
 - (void)popToRootViewControllerAnimated:(BOOL)animated
-                             completion:(void(^)())completion;
+                             completion:(void(^)(void))completion;
 
 
 /**
