@@ -15,31 +15,31 @@ It was built on top of the [SCStackViewController](https://github.com/stefanceri
 
 ##### Parallax - Sine Ease In Out - Right
 
-![Parallax - Sine Ease In Out - Right](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoVFVNR1A2b0wwa1k)
+![Parallax - Sine Ease In Out - Right](https://drive.google.com/u/0/uc?id=1yh8802OXWy1g5_LmJBb56gPmcXsbSR_3&export=download)
 
 ##### Parallax - Sine Ease In Out - Top
 
-![Parallax - Sine Ease In Out - Top](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoOVktTWRrSVV5ZDQ)
+![Parallax - Sine Ease In Out - Top](https://drive.google.com/u/0/uc?id=1Kivlt5-INkH03vhC79MdBA8AIg_ZybGN&export=download)
 
 ##### Parallax - Interactive
 
-![Parallax - Interactive](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZ1JYckpENk1WdkU)
+![Parallax - Interactive](https://drive.google.com/u/0/uc?id=13CiPTKYkHOtJFpINaI3dGHQJtEKQcfpy&export=download)
 
 ##### Plain - Elastic Ease Out
 
-![Plain - Elastic Ease Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoSTZudVo1T0o1dzQ)
+![Plain - Elastic Ease Out](https://drive.google.com/u/0/uc?id=1zegzg-Ysma5Axr5xjdMnvcpE3dNhoZ2y&export=download)
 
 ##### Sliding - Bounce Ease Out
 
-![Sliding - Bounce Ease Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoRHg0bkcwamE0LXc)
+![Sliding - Bounce Ease Out](https://drive.google.com/u/0/uc?id=1J61n7zFqineGqHMewWkbPwx3Kgl-YwTO&export=download)
 
 ##### Parallax - Back Ease In Out
 
-![Parallax - Back Ease In Out](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZHN3S1V4b3RlZWc)
+![Parallax - Back Ease In Out](https://drive.google.com/u/0/uc?id=1TbewTm1Y_WzY6lZ7Gf0lRApYci_u7Q62&export=download)
 
 ##### Google Maps - Back Ease In
 
-![Google Maps - Back Ease In](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoZDVGTGlVeFZNUGM)
+![Google Maps - Back Ease In](https://drive.google.com/u/0/uc?id=1FiMfnhQYHNfUS8O_SPI4Jn92zrOhSMOo&export=download)
 
 ## Usage
 
